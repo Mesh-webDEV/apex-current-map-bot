@@ -8,7 +8,6 @@ module.exports = {
         const {
           data: { battle_royale },
         } = await axios.get(`${APEX_API.URL}&auth=${APEX_API.KEY}`);
-        console.log('success getting map');
         resolve(battle_royale);
       } catch (error) {
         console.log(error);

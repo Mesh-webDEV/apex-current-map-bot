@@ -21,12 +21,8 @@ client.on('interactionCreate', async interaction => {
 
   const { commandName } = interaction;
 
-  console.log('=== Command name:');
-  console.log(commandName);
-
   try {
     const { current, next } = await getCurrentMap();
-    console.log('=================');
     return await interaction.reply({ embeds: [current_map(current, next)] });
   } catch (error) {
     console.log(error);

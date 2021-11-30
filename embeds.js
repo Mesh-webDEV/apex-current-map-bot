@@ -3,10 +3,6 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
   current_map: (current, next) => {
-    console.log('=== current: ');
-    console.log(current);
-    console.log('=== next: ');
-    console.log(next);
     return new MessageEmbed()
       .setColor('#B93038')
       .setTitle('Apex Legends current map')

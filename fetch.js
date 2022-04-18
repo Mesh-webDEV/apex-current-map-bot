@@ -1,5 +1,5 @@
-const { APEX_API } = require('./lib/configs');
-const axios = require('axios').default;
+const { APEX_API } = require("./lib/configs");
+const axios = require("axios").default;
 
 module.exports = {
   getCurrentMap: () =>
@@ -8,10 +8,11 @@ module.exports = {
         const {
           data: { battle_royale },
         } = await axios.get(`${APEX_API.URL}&auth=${APEX_API.KEY}`);
+        console.log(battle_royale);
         resolve(battle_royale);
       } catch (error) {
         console.log(error);
-        reject('Error fetching the current map 🔴👀. Try again later.');
+        reject("Error fetching the current map 🔴👀. Try again later.");
       }
     }),
 };
